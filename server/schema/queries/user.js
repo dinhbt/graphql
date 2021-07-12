@@ -4,7 +4,11 @@ const axios = require('axios');
 
 const { UserType } = require('../types');
 
-const { GraphQLString, } = graphql;
+const {
+    GraphQLInt,
+    GraphQLString,
+    GraphQLNonNull,
+} = graphql;
 
 const users = {
     type: UserType,

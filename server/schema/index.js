@@ -2,6 +2,7 @@ const graphql = require('graphql');
 
 const UserQueries = require('./queries/user');
 const CompanyQueries = require('./queries/company');
+const Mutation = require('./queries/mutation');
 
 
 const {
@@ -16,4 +17,7 @@ const RootQuery = new GraphQLObjectType({
         ...CompanyQueries,
     }
 });
-module.exports = new GraphQLSchema({ query: RootQuery });
+module.exports = new GraphQLSchema({ 
+    query: RootQuery,
+    mutation: Mutation
+ });
